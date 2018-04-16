@@ -1,8 +1,24 @@
 import * as React from "react";
+import * as monaco from '@timkendrick/monaco-editor';
+
+
+
+
 
 export default class TestComponent extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
+  }
+
+  public componentDidMount() {
+    const emptyDiv = document.getElementById("emptyDiv");
+    const options = {
+      value: "aslñkdmfnlkjsandlfjnskdjf",
+      automaticLayout: true
+    }
+    monaco.editor.create(emptyDiv, options);
+
+    emptyDiv.style.height = '500px';
   }
 
   public render() {
@@ -16,6 +32,8 @@ export default class TestComponent extends React.Component<any, any> {
           <br />
           is the custom text.
         </p>
+        <div id={"emptyDiv"}></div>
+        <p>Monaco editor should appear above</p>
       </div>
     )
   }
