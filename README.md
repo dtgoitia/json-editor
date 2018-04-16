@@ -4,6 +4,9 @@
 - [x] Setup TypeScript
 - [x] Move static assets to `/statics`.
 - [x] Setup Webpack Dev Server
+- [ ] Play around with React TypeScript
+- [ ] Add TypeScript linter
+- [ ] Setup a `tsconfig.json` for production (minified) and another one for development (keep comments and function names).
 - [ ] Add monaco: https://github.com/timkendrick/monaco-editor
 - [ ] Add "hard-coded" snippets
 - [ ] Add tools to communicate with the server
