@@ -1,0 +1,11 @@
+{
+  "enable": true,
+  "alwaysShowStatus": true,
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "jsx-wrap-multiline": false,
+    "jsx-self-close": true,
+    "jsx-equals-spacing": true
+  }
+}

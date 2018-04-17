@@ -4,10 +4,11 @@
 - [x] Setup TypeScript
 - [x] Move static assets to `/statics`.
 - [x] Setup Webpack Dev Server
-- [ ] Play around with React TypeScript
-- [ ] Add TypeScript linter
+- [x] Add TypeScript linter for the project
+- [x] Play around with React TypeScript
 - [ ] Setup a `tsconfig.json` for production (minified) and another one for development (keep comments and function names).
-- [ ] Add monaco: https://github.com/timkendrick/monaco-editor
+- [x] Add monaco: https://github.com/timkendrick/monaco-editor
+- [ ] Add JSON linter for monaco
 - [ ] Add "hard-coded" snippets
 - [ ] Add tools to communicate with the server
 - [ ] Implement swagger to validate JSON
@@ -34,4 +35,27 @@ npm start
 or build to `/dist` folder:
 ```bash
 npm run build
+```
+
+## Development
+
+Note the instructions below target _Visual Studio Code_ (VSC):
+
+* TypeScript Linter:
+  * Install the `tslint` VSC extension.
+  * Reload VSC.
+  * Create a `tslint.json` configuration file:
+
+```json
+{
+  "enable": true,
+  "alwaysShowStatus": true,
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "jsx-wrap-multiline": false,
+    "jsx-self-close": true,
+    "jsx-equals-spacing": true
+  }
+}
 ```

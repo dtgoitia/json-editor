@@ -15,6 +15,8 @@
     "copy-webpack-plugin": "^4.5.1",
     "source-map-loader": "^0.2.3",
     "ts-loader": "^4.2.0",
+    "tslint": "^5.9.1",
+    "tslint-react": "^3.5.1",
     "typescript": "^2.8.1",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14",
@@ -22,7 +24,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js"
+    "build": "webpack --mode production --config webpack.config.js",
+    "lint": "tslint --project tsconfig.json"
   },
   "keywords": [],
   "author": "",
