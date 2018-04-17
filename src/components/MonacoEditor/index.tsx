@@ -2,9 +2,12 @@ import * as monaco from "@timkendrick/monaco-editor";
 import * as React from "react";
 
 export default class MonacoEditor extends React.Component<any, any> {
-  private editor = monaco.editor;
+  private editor: monaco.editor.IStandaloneCodeEditor;
   constructor(props: any) {
     super(props);
+    this.state = {
+      editorValue: this.props.customText,
+    }
     this.onTap = this.onTap.bind(this);
   }
 
@@ -12,18 +15,19 @@ export default class MonacoEditor extends React.Component<any, any> {
     const emptyDiv = document.getElementById("monaco-container");
     const options = {
       automaticLayout: true,
-      language: "json",
       value: this.props.customText,
+      language: "json",
     };
-    this.editor.create(emptyDiv, options);
+    this.editor = monaco.editor.create(emptyDiv, options);
 
     emptyDiv.style.height = "500px";
   }
 
   public onTap() {
-    const newValue = "aaaaa";
+    // const newValue = "aaaaa";
+    const newValue = this.editor.getValue();
     this.setState({
-      value: newValue,
+      editorValue: newValue,
     });
     /* tslint:disable-next-line:no-console */
     console.log("clicked!!!");
@@ -37,7 +41,7 @@ export default class MonacoEditor extends React.Component<any, any> {
         <p>
           And this:
           <br />
-          <i>{this.props.customText}</i>
+          <i>{this.state.editorValue}</i>
           <br />
           is the custom text.
         </p>
