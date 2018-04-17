@@ -7,7 +7,7 @@ export default class MonacoEditor extends React.Component<any, any> {
     super(props);
     this.state = {
       editorValue: this.props.customText,
-    }
+    };
     this.onTap = this.onTap.bind(this);
   }
 
