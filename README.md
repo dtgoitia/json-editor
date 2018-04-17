@@ -8,6 +8,7 @@
 - [x] Play around with React TypeScript
 - [ ] Setup a `tsconfig.json` for production (minified) and another one for development (keep comments and function names).
 - [x] Add monaco: https://github.com/timkendrick/monaco-editor
+- [ ] Implement Schema for Monaco
 - [ ] Add JSON linter for monaco
 - [ ] Add "hard-coded" snippets
 - [ ] Add tools to communicate with the server
