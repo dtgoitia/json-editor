@@ -15,8 +15,8 @@ export default class MonacoEditor extends React.Component<any, any> {
     const emptyDiv = document.getElementById("monaco-container");
     const options = {
       automaticLayout: true,
-      value: this.props.customText,
       language: "json",
+      value: this.props.customText,
     };
     this.editor = monaco.editor.create(emptyDiv, options);
 
